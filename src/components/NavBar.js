@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { HashLink } from 'react-router-hash-link';
+import { BrowserRouter as Router} from "react-router-dom";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
@@ -26,16 +28,10 @@ export const NavBar = ({ contactRef}) => {
     setActiveLink(value);
   }
 
-  const handleClick = () => {
-    contactRef.current.scrollIntoView({ behavior: "smooth" });
-  };
-
-
   return (
-    <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
-        <Container>
-          <Navbar.Brand href="#home">
-          </Navbar.Brand>
+  <Router>
+    <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+        <Container className="flex-row-reverse">
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
@@ -52,10 +48,13 @@ export const NavBar = ({ contactRef}) => {
                 <a href="https://www.instagram.com/pdumrauf" target="_blank" rel='noreferrer'><img src={navIcon3} alt="" /></a>
                 <a href="https://github.com/pdumrauf" target="_blank" rel='noreferrer'><img src={navIcon4} alt="" /></a>
               </div>
-              <button className="vvd" onClick={handleClick}><span>Let's Connect</span></button>
+              <HashLink to='#connect'>
+                <button><span>Let's Connect</span></button>
+              </HashLink>
             </span>
           </Navbar.Collapse>
         </Container>
     </Navbar>
+  </Router>
   )
 }

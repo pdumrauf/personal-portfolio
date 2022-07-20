@@ -16,6 +16,7 @@ export const Banner = () => {
     }, delta)
 
     return () => { clearInterval(ticker) }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [text]);
 
   const tick = () => {
@@ -43,10 +44,11 @@ export const Banner = () => {
     <section className="banner" id="home">
       <Container>
         <Row className="align-item-center">
-          <Col xs={12} md={6} xl={7}>
+          <Col xs={12} xl={7}>
             <span className="tagline">Welcome to my Portfolio</span>
-            <h1>{`Hi! I'm Paula, `}<span className="wrap">{text}</span></h1>
-            <p>I'm a Front-end developer looking for my first work experience in the world of web development. I'm curious and committed. Adaptable, proactive, and open to learning. Eager to grow professionally, and learn new skills. At present, I'm taking a course on NodeJS.</p>
+              <h1>Hi, I'm Paula!</h1>
+              <span className="wrap">{text}_</span>
+              <p>I'm a Front-end developer looking for my first work experience in the world of web development. I'm curious and committed. Adaptable, proactive, and open to learning. Eager to grow professionally, and learn new skills. At present, I'm taking a course on NodeJS.</p>
           </Col>
           <Col xl={5}>
             <img src={headerImg} alt="Header Img" />
