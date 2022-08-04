@@ -25,7 +25,7 @@ $ npm install
 $ npm start
 ```
 
-## Get in touch
+## Let's get in touch
 
 - E-mail: dumraufp@gmail.com
 - Twitter: @pdumrauf
