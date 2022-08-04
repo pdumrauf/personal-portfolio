@@ -1,6 +1,7 @@
+import '../assets/styles/Skills.css'
+import "react-multi-carousel/lib/styles.css";
 import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import html from "../assets/img/html.svg";
 import css from "../assets/img/css.svg";
 import js from "../assets/img/js.svg";

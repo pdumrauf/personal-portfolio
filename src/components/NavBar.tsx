@@ -1,3 +1,4 @@
+import '../assets/styles/NavBar.css'
 import { useState, useEffect } from "react";
 import { HashLink } from 'react-router-hash-link';
 import { BrowserRouter as Router} from "react-router-dom";
@@ -7,9 +8,9 @@ import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 import navIcon4 from '../assets/img/nav-icon4.svg';
 
-export const NavBar = ({ contactRef}) => {
-  const [activeLink, setActiveLink ] = useState('home');
-  const [scrolled, setScrolled] = useState(false);
+export const NavBar = () => {
+  const [activeLink, setActiveLink ] = useState<string>('home');
+  const [scrolled, setScrolled] = useState<boolean>(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -24,7 +25,7 @@ export const NavBar = ({ contactRef}) => {
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
-  const onUpdateActiveLink = (value) => {
+  const onUpdateActiveLink = (value: string) => {
     setActiveLink(value);
   }
 

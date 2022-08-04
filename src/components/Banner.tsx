@@ -1,13 +1,14 @@
+import '../assets/styles/Banner.css'
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img-svg.svg"
 
 export const Banner = () => {
-  const [loopNum, setLoopNum] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState<number>(0);
+  const [isDeleting, setIsDeleting] = useState<boolean>(false);
   const toRotate = ["Frontend Developer", "Web Designer"];
-  const [text, setText] = useState('');
-  const [delta, setDelta] = useState(300 - Math.random() * 100) 
+  const [text, setText] = useState<string>('');
+  const [delta, setDelta] = useState<number>(300 - Math.random() * 100) 
   const period = 2000;
 
   useEffect(() => {
@@ -22,8 +23,10 @@ export const Banner = () => {
   const tick = () => {
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
-    let updatedText = isDeleting ? fullText.substring(0, text.length -1) : fullText.substring(0, text.length + 1)
-  
+    let updatedText = isDeleting 
+      ? fullText.substring(0, text.length -1) 
+      : fullText.substring(0, text.length + 1)
+    
     setText(updatedText);
 
     if(isDeleting) {

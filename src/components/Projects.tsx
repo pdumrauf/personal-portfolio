@@ -1,3 +1,4 @@
+import '../assets/styles/Projects.css'
 import { Container, Row, Col } from 'react-bootstrap';
 import { ProjectCard } from './ProjectCard';
 import projImg1 from "../assets/img/projectImg1.png";

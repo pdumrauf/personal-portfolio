@@ -1,3 +1,4 @@
+import '../assets/styles/Contact.css'
 import { Col, Row, Container } from "react-bootstrap";
 import CV from "../assets/files/CV_Paula_Dumrauf.pdf"
 

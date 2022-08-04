@@ -1,10 +1,9 @@
+import '../assets/styles/Contact.css'
 import { Container, Col, Row } from "react-bootstrap"
 import { useForm, ValidationError } from '@formspree/react';
-//import { DownloadCV } from './DownloadCV';
 import contactImg from "../assets/img/contact-img.svg"
-import { forwardRef } from "react";
 
-export const Contact = forwardRef((props, ref) => {
+export const Contact = () => {
   const [state, handleSubmit] = useForm("xqknvjgw");
 
   if (state.succeeded) {
@@ -12,7 +11,7 @@ export const Contact = forwardRef((props, ref) => {
   }
 
   return (
-    <section className="contact" id="connect" ref={ref}>
+    <section className="contact" id="connect">
       <Container>
         <Row className="align-items-center">
           <Col md={6}>
@@ -34,4 +33,4 @@ export const Contact = forwardRef((props, ref) => {
       </Container>
     </section>
   )
-})
+}

@@ -1,9 +1,17 @@
+import '../assets/styles/Projects.css'
 import { Col } from "react-bootstrap";
 
-export const ProjectCard = ({ title, description, imgUrl, url }) => {
+interface ProjectCardProps {
+  title: string, 
+  description: string,
+  imgUrl: string,
+  url: string
+}
+
+export const ProjectCard: React.FC<ProjectCardProps> = ({url, imgUrl, title, description}) => {
   return (
       <Col md={4}>
-        <a href={url} alt="linkProject" target="_blank" rel="noreferrer">
+        <a href={url} target="_blank" rel="noreferrer">
           <div className="proj-imgbx">
             <img src={imgUrl} alt="ImgProject"/>
             <div className="proj-txtx">
