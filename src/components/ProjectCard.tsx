@@ -2,13 +2,14 @@ import '../assets/styles/Projects.css'
 import { Col } from "react-bootstrap";
 
 interface ProjectCardProps {
+  id: number,
   title: string, 
   description: string,
   imgUrl: string,
   url: string
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({url, imgUrl, title, description}) => {
+export const ProjectCard: React.FC<ProjectCardProps> = ({ url, imgUrl, title, description }) => {
   return (
       <Col md={4}>
         <a href={url} target="_blank" rel="noreferrer">

@@ -9,18 +9,21 @@ export const Projects = () => {
 
   const projects = [
   {
+    id: 1,
     title: "Shopet",
     description: "Web design HTML/CSS for a pet shop",
     imgUrl: projImg1,
     url: "https://pdumrauf.github.io/shopet/"
   },
   {
+    id: 2,
     title: "SkinItUp",
     description: "E-commerce about skincare using Vanilla JS / jQuery",
     imgUrl: projImg2,
     url: "https://pdumrauf.github.io/skin-It-Up/"
   },
   {
+    id: 3,
     title: "Scrap",
     description: "E-commerce about scrapbooking using React JS.",
     imgUrl: projImg3,
@@ -37,10 +40,10 @@ export const Projects = () => {
             <p>Check out my recent project!</p>
               <Row>
                 {
-                  projects.map((project, index) => {
+                  projects.map(project => {
                     return(
                       <ProjectCard 
-                        key={index}
+                        key={project.id}
                         {...project}
                       />
                     )
